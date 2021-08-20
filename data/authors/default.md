@@ -1,16 +1,18 @@
 ---
-name: Tails Azimuth
+name: Salman Hossain
 avatar: /static/images/avatar.png
-occupation: Professor of Atmospheric Science
-company: Stanford University
-email: address@yoursite.com
+occupation: Applied Mathematics Major
+company: City College
+email: salmanhossain500@gmail.com
 twitter: https://twitter.com/Twitter
 linkedin: https://www.linkedin.com
-github: https://github.com
+github: https://github.com/defunsm
 ---
 
-Tails Azimuth is a professor of atmospheric sciences at the Stanford AI Lab. His research interests includes complexity modelling of tailwinds, headwinds and crosswinds.
+Oh.. this is the part where I tell you about myself... Uhmm.. let me get back to you.
 
-He leads the clean energy group which develops 3D air pollution-climate models, writes differential equation solvers, and manufactures titanium plated air ballons. In his free time he bakes raspberry pi.
+...Okay I'm back and I formulated some facts about myself so I can make myself seem more impressive then I really am so here it goes...
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque elit, tristique placerat feugiat ac, facilisis vitae arcu. Proin eget egestas augue. Praesent ut sem nec arcu pellentesque aliquet. Duis dapibus diam vel metus tempus vulputate.
+I'm an Applied Mathematics major so I'm really into math and coding wait no-.. that doesn't sound very sophisticated anyone using the word 'stuff' clearly don't know what they're are talking about..
+
+Wait... Are you still here reading this?... Well just look at my projects and you'll know what kind of kinky stuf-.. I mean what my interests are.
