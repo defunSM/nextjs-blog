@@ -8,7 +8,7 @@ import LayoutWrapper from '@/components/LayoutWrapper'
 import { ClerkProvider, SignedIn, SignedUp, SignedOut, RedirectToSignIn } from '@clerk/nextjs'
 import { useRouter } from 'next/router'
 
-export const publicPages = []
+const publicPages = []
 
 export default function App({ Component, pageProps }) {
   // Get the pathname

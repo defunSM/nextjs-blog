@@ -19,7 +19,7 @@ import {
 } from '@clerk/nextjs'
 import { useRouter } from 'next/router'
 
-export const publicPages = []
+const publicPages = []
 
 const LayoutWrapper = ({ children }) => {
   const { pathname } = useRouter()
