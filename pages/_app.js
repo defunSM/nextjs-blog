@@ -19,13 +19,13 @@ export default function App({ Component, pageProps }) {
   // If the current route is listed as public, render it directly
   // Otherwise, use Clerk to require authentication
   return (
-    <ThemeProvider attribute="class">
-      <Head>
-        <meta content="width=device-width, initial-scale=1" name="viewport" />
-      </Head>
-      <Analytics />
-      <LayoutWrapper>
-        <ClerkProvider>
+    <ClerkProvider>
+      <ThemeProvider attribute="class">
+        <Head>
+          <meta content="width=device-width, initial-scale=1" name="viewport" />
+        </Head>
+        <Analytics />
+        <LayoutWrapper>
           {isPublicPage ? (
             <Component {...pageProps} />
           ) : (
@@ -34,12 +34,12 @@ export default function App({ Component, pageProps }) {
                 <Component {...pageProps} />
               </SignedIn>
               <SignedOut>
-                <RedirectToSignIn />
+                <Component {...pageProps} />
               </SignedOut>
             </>
           )}
-        </ClerkProvider>
-      </LayoutWrapper>
-    </ThemeProvider>
+        </LayoutWrapper>
+      </ThemeProvider>
+    </ClerkProvider>
   )
 }

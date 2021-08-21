@@ -7,7 +7,25 @@ import Footer from './Footer'
 import MobileNav from './MobileNav'
 import ThemeSwitch from './ThemeSwitch'
 
+import {
+  ClerkProvider,
+  SignedIn,
+  SignedUp,
+  SignedOut,
+  RedirectToSignIn,
+  useUser,
+  UserButton,
+  withUser,
+} from '@clerk/nextjs'
+import { useRouter } from 'next/router'
+
+export const publicPages = []
+
 const LayoutWrapper = ({ children }) => {
+  const { pathname } = useRouter()
+  // Check if the current route matches a public page
+  const isPublicPage = publicPages.includes(pathname)
+  //const { firstName } = withUser()
   return (
     <SectionContainer>
       <div className="flex flex-col justify-between h-screen">
@@ -39,7 +57,19 @@ const LayoutWrapper = ({ children }) => {
                   {link.title}
                 </Link>
               ))}
+              <SignedOut>
+                <Link
+                  key="Sign In"
+                  href="https://accounts.kkwyr.i3qnb.stg.dev/sign-up"
+                  className="p-1 font-medium text-gray-900 sm:p-4 dark:text-gray-100"
+                >
+                  Sign In
+                </Link>
+              </SignedOut>
             </div>
+            <SignedIn>
+              <UserButton></UserButton>
+            </SignedIn>
             <ThemeSwitch />
             <MobileNav />
           </div>
