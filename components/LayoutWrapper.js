@@ -6,6 +6,7 @@ import SectionContainer from './SectionContainer'
 import Footer from './Footer'
 import MobileNav from './MobileNav'
 import ThemeSwitch from './ThemeSwitch'
+import Image from 'next/image' // https://nextjs.org/docs/messages/no-img-element
 
 import {
   ClerkProvider,
@@ -21,6 +22,10 @@ import { useRouter } from 'next/router'
 
 const publicPages = []
 
+const myLoader = ({ src, width, quality }) => {
+  return `https://tybapp.ml/${src}?w=${width}&q=${quality || 75}`
+}
+
 const LayoutWrapper = ({ children }) => {
   const { pathname } = useRouter()
   // Check if the current route matches a public page
@@ -34,7 +39,13 @@ const LayoutWrapper = ({ children }) => {
             <Link href="/" aria-label="Tailwind CSS Blog">
               <div className="flex items-center justify-between">
                 <div className="mr-3">
-                  <Logo />
+                  <Image
+                    loader={myLoader}
+                    src="/data/logo.svg"
+                    alt="site logo"
+                    height={100}
+                    width={100}
+                  />
                 </div>
                 {typeof siteMetadata.headerTitle === 'string' ? (
                   <div className="hidden h-6 text-2xl font-semibold sm:block">
