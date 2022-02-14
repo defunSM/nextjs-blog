@@ -41,7 +41,7 @@ const LayoutWrapper = ({ children }) => {
                 <div className="mr-3">
                   <Image
                     loader={myLoader}
-                    src="/data/logo.svg"
+                    src="data/logo.svg"
                     alt="site logo"
                     height={100}
                     width={100}
