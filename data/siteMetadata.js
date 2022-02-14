@@ -1,7 +1,7 @@
 const siteMetadata = {
-  title: 'Totally NOT a blog',
+  title: 'Salman Hossain',
   author: 'Salman Hossain',
-  headerTitle: 'Totally NOT a blog',
+  headerTitle: 'Salman Hossain',
   description: 'A blog created with Next.js and Tailwind.css',
   language: 'en-us',
   siteUrl: 'https://tailwind-nextjs-starter-blog.vercel.app',
