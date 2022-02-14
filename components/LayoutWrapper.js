@@ -22,9 +22,17 @@ import { useRouter } from 'next/router'
 
 const publicPages = []
 
-const myLoader = ({ src, width, quality }) => {
-  return `https://tybapp.ml/${src}?w=${width}&q=${quality || 75}`
+// TODO: Improve logo and figure out how to load it form data/logo.svg from Logo Component
+// There seems to be an error that when using the Image component by nextjs it returns empty object
+// DOCUMENTATION on next/Image component -> https://nextjs.org/docs/api-reference/next/image
+//
+
+// Handles the resizing of the logo which is used below inside the Image component.
+const myLogoLoader = ({ src, width, quality }) => {
+  return `https://i.imgur.com/${src}?w=${width}&q=${quality || 100}`
 }
+
+const [logoHeight, logoWidth] = [75, 75]
 
 const LayoutWrapper = ({ children }) => {
   const { pathname } = useRouter()
@@ -39,13 +47,7 @@ const LayoutWrapper = ({ children }) => {
             <Link href="/" aria-label="Tailwind CSS Blog">
               <div className="flex items-center justify-between">
                 <div className="mr-3">
-                  <Image
-                    loader={myLoader}
-                    src="data/logo.svg"
-                    alt="site logo"
-                    height={100}
-                    width={100}
-                  />
+                  <Image loader={myLogoLoader} src="ywHSEmR.png" alt="" height={100} width={100} />
                 </div>
                 {typeof siteMetadata.headerTitle === 'string' ? (
                   <div className="hidden h-6 text-2xl font-semibold sm:block">
